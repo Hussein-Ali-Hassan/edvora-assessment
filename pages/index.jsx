@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 
 import FilterBox from "@/components/FilterBox";
+import ProductsList from "@/components/ProductsList";
+import Skeleton from "@/components/Skeleton";
 import useProductsApi from "@/hooks/useProductsApi";
 import useFilterProducts from "@/hooks/useFilterProducts";
 import getUniqueValues from "@/utils/getUniquValues";
@@ -17,8 +19,6 @@ export default function Home() {
   useEffect(() => {
     fetchProducts();
   }, []);
-
-  if (loading) return <h1>Loading...</h1>;
 
   // get the unique products_name, state, and city among all products
   const uniqueProductsName = getUniqueValues(products, "product_name");
@@ -63,34 +63,24 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h1 className="text-4xl text-white opacity-80 font-bold">Edvora</h1>
-        <p className="text-2xl font-medium text-white opacity-40 mt-4">
+        <h1 className="text-4xl text-white text-opacity-80 font-bold font-sans">
+          Edvora
+        </h1>
+        <p className="text-2xl font-medium text-white text-opacity-40 mt-4">
           Products
         </p>
-        {categorizedProducts.map((products) => (
-          <ProductsList products={products} />
-        ))}
+        {loading && <Skeleton />}
+        {!loading && categorizedProducts.length === 0 && (
+          <p className="text-2xl font-medium text-white mt-6">
+            No products to show
+          </p>
+        )}
+        {!loading &&
+          categorizedProducts.length > 0 &&
+          categorizedProducts.map((products) => (
+            <ProductsList products={products} />
+          ))}
       </section>
     </main>
-  );
-}
-
-function ProductsList({ products }) {
-  if (products.length === 0) return null;
-
-  return (
-    <div className="text-white w-full h-60 flex flex-row shadow-md py-6 px-4 overflox-x-scroll ">
-      <strong>{products[0].product_name}</strong>
-      {products.map((product) => (
-        <div
-          className="shadow-sm w-44 h-32 p-4 flex flex-col"
-          key={product.date}
-        >
-          <strong>{product.product_name}</strong>
-          <p> State: {product.address.state}</p>
-          <p>City: {product.address.city}</p>
-        </div>
-      ))}
-    </div>
   );
 }
