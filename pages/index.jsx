@@ -75,11 +75,13 @@ export default function Home() {
             No products to show
           </p>
         )}
-        {!loading &&
-          categorizedProducts.length > 0 &&
-          categorizedProducts.map((products) => (
-            <ProductsList products={products} />
-          ))}
+        {!loading && categorizedProducts.length > 0 && (
+          <section className="pt-3">
+            {categorizedProducts.map((products) => (
+              <ProductsList products={products} />
+            ))}
+          </section>
+        )}
       </section>
     </main>
   );

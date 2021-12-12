@@ -24,3 +24,14 @@
     @apply bg-primary;
   }
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* for the custome arrows in the carousel */
+.slick-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

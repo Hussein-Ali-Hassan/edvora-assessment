@@ -9,7 +9,7 @@ export default function Skeleton() {
 
 function ProductsListSkeleton() {
   return (
-    <div className="pt-8">
+    <div className="pt-11">
       <div class="bg-gray-600 w-32 animate-pulse h-3 rounded-2xl mb-3"></div>
       <hr className="text-white mb-5" />
       <div className="bg-secondary flex flex-row rounded-xl py-6 px-5">
