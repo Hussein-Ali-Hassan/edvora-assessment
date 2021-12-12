@@ -35,3 +35,8 @@ body {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+/* to prevent the products (when there is less than 4) from aliging to center */
+.slick-track {
+  margin: 0 !important;
+}

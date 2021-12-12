@@ -16,7 +16,6 @@ function ProductsListSkeleton() {
         <CardSkeleton />
         <CardSkeleton />
         <CardSkeleton />
-        <CardSkeleton />
       </div>
     </div>
   );
@@ -24,7 +23,7 @@ function ProductsListSkeleton() {
 
 function CardSkeleton() {
   return (
-    <div class="bg-primary rounded-sm py-4 px-6 mx-4">
+    <div class="bg-primary rounded-sm py-4 px-8 mx-4">
       <div className="grid grid-cols-2">
         <div className="flex flex-col justify-between">
           <div class="bg-gray-400 w-[70px] h-[70px] animate-pulse rounded-xl"></div>

@@ -69,13 +69,13 @@ export default function Home() {
         <p className="text-2xl font-medium text-white text-opacity-40 mt-4">
           Products
         </p>
-        {loading && <Skeleton />}
-        {!loading && categorizedProducts.length === 0 && (
+        {loading ? (
+          <Skeleton />
+        ) : categorizedProducts.length === 0 ? (
           <p className="text-2xl font-medium text-white mt-6">
             No products to show
           </p>
-        )}
-        {!loading && categorizedProducts.length > 0 && (
+        ) : (
           <section className="pt-3">
             {categorizedProducts.map((products) => (
               <ProductsList products={products} />

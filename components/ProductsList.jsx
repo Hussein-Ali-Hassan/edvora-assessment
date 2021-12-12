@@ -4,6 +4,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 import ProductCard from "./ProductCard";
 
+// i decided to put 3 products in a row instead of 4 (as shown in design)
+// since the text is collapsing together and it didn't look good when decreasing
+// the font size to solve the problem
+
 const config = {
   infinite: false,
   speed: 300,
