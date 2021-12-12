@@ -11,7 +11,7 @@ export default function ProductCard({ product }) {
           <img
             src={product.image}
             alt={product.product_name}
-            className="w-[80px] h-[80px] rounded-md"
+            className="w-[80px] h-[80px] object-cover rounded-md"
           />
           {/* the UI protoype didn't specify what to render, so I chose the city for more precision */}
           <span className="mt-2">{product.address.city}</span>
