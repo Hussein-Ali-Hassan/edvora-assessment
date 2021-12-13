@@ -10,7 +10,7 @@ export default function Skeleton() {
 function ProductsListSkeleton() {
   return (
     <div className="pt-10 ml-2">
-      <div class="bg-gray-600 w-32 animate-pulse h-3 rounded-2xl mb-3"></div>
+      <div class="bg-gray-600 h-3 w-32 animate-pulse rounded-2xl mb-3"></div>
       <hr className="text-white mb-5" />
       <div className="bg-secondary flex flex-row rounded-xl py-6 px-7">
         <CardSkeleton />

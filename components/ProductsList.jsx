@@ -45,8 +45,8 @@ function LeftArrow({ className, style, onClick }) {
         ...style,
         color: "white",
         left: "-100px",
-        width: "100px",
         height: "40px",
+        width: "100px",
       }}
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -72,8 +72,8 @@ function RightArrow({ className, style, onClick }) {
         ...style,
         color: "white",
         right: "-100px",
-        width: "100px",
         height: "40px",
+        width: "100px",
       }}
       viewBox="0 0 24 24"
       stroke="currentColor"
