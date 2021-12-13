@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export default function useProductsApi() {
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
     try {
