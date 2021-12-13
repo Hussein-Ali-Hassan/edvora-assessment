@@ -5,6 +5,6 @@ export default async function getProducts(req, res) {
 
     res.status(200).json({ products });
   } catch (error) {
-    res.status(500).json({ message: "An error occured. Please try again." });
+    res.status(500).json({ message: error.message });
   }
 }
