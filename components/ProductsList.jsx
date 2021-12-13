@@ -24,7 +24,7 @@ export default function ProductsList({ products }) {
     <div className="pt-7">
       <h2 className="text-xl text-white mb-3">{products[0].product_name}</h2>
       <hr className="text-white mb-5" />
-      <div className="bg-secondary text-white max-w-[970px] rounded-xl py-6 px-5">
+      <div className="bg-secondary text-white w-[970px] rounded-xl py-6 px-5">
         <Slider {...config}>
           {products.map((product) => (
             <ProductCard product={product} />

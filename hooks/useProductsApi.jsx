@@ -13,7 +13,7 @@ export default function useProductsApi() {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      alert("An error occured, please try reloading the page");
+      alert(error.message);
     }
   };
 

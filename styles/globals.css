@@ -33,7 +33,7 @@ body {
 /* for the custome arrows in the carousel */
 .slick-disabled {
   opacity: 0.4;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 /* to prevent the products (when there is less than 4) from aliging to center */

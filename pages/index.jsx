@@ -69,19 +69,19 @@ export default function Home() {
         <p className="text-2xl font-medium text-white text-opacity-40 mt-4">
           Products
         </p>
-        {loading ? (
-          <Skeleton />
-        ) : categorizedProducts.length === 0 ? (
-          <p className="text-2xl font-medium text-white mt-6">
-            No products to show
-          </p>
-        ) : (
-          <section className="pt-3">
-            {categorizedProducts.map((products) => (
+        <section className="pt-3">
+          {loading ? (
+            <Skeleton />
+          ) : categorizedProducts.length === 0 ? (
+            <p className="text-2xl font-medium text-white mt-3">
+              No products to show
+            </p>
+          ) : (
+            categorizedProducts.map((products) => (
               <ProductsList products={products} />
-            ))}
-          </section>
-        )}
+            ))
+          )}
+        </section>
       </section>
     </main>
   );
